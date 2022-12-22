@@ -1,7 +1,13 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">TypeScript</router-link>
+    <div>
+      <router-link to="/function">function</router-link>|
+      <router-link to="/optionalParameters">optionalParameters</router-link>|
+      <router-link to="/defaultParameters">defaultParameters</router-link>|
+      <router-link to="/restParameters">restParameters</router-link>|
+      <router-link to="/functionOverloadings">functionOverloadings</router-link>|
+    </div>
   </nav>
   <router-view/>
 </template>
