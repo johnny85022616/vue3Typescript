@@ -6,7 +6,6 @@
 import { defineComponent } from 'vue';
 
 
-//在要傳入的可選參數前加上？
 export default defineComponent({
   name: 'restParameters',
   setup(){

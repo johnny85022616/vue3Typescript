@@ -5,24 +5,29 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-
-//在要傳入的可選參數前加上？
+/* eslint-disable */
+//函數重載(函數名字相，參數及個數不同)
 export default defineComponent({
   name: ' functionOverloadings',
   setup(){
-    // function add(x:string,y:string):string
-    // function add(x:number,y:number):number  
 
+    //函數重載
+    function add(x:string,y:string):string
+    function add(x:number,y:number):number  
+
+    //函數聲明
     function add(x:string|number , y:string|number):string|number{
       if(typeof x === 'string' && typeof y === 'string'){
         return x+y
       }else if(typeof x === 'number' && typeof y === 'number'){
         return x+y
       }
-      return "different type can't add "
+      return "different type can't add"
     }
 
-    console.log(add(1,'2')); //若不寫函數重載
+    // console.log(add(1,'2')); //不符合函數重載定義則會列出警告(若沒寫函數重載不會列出警告)
+    console.log(add(1,2)); //符合函數重載聲明
+    console.log(add("1","2")); //符合函數重載聲明
     
 
     return {

@@ -1,13 +1,14 @@
 <template>
   <nav>
     <router-link to="/">TypeScript</router-link>
-    <div>
+      <h1>function</h1>
       <router-link to="/function">function</router-link>|
       <router-link to="/optionalParameters">optionalParameters</router-link>|
       <router-link to="/defaultParameters">defaultParameters</router-link>|
       <router-link to="/restParameters">restParameters</router-link>|
       <router-link to="/functionOverloadings">functionOverloadings</router-link>|
-    </div>
+      <h1>Generics</h1>
+      <router-link to="/function">function</router-link>|
   </nav>
   <router-view/>
 </template>
