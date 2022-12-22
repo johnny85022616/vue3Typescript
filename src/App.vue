@@ -8,7 +8,7 @@
       <router-link to="/restParameters">restParameters</router-link>|
       <router-link to="/functionOverloadings">functionOverloadings</router-link>|
       <h1>Generics</h1>
-      <router-link to="/function">function</router-link>|
+      <router-link to="/generics">generics</router-link>|
   </nav>
   <router-view/>
 </template>
