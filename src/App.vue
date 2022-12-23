@@ -1,14 +1,17 @@
 <template>
   <nav>
-    <router-link to="/">TypeScript</router-link>
+    <!-- <router-link to="/">TypeScript</router-link> -->
+       <h1>interface</h1>
+      <router-link to="/interface">interface</router-link> |
       <h1>function</h1>
-      <router-link to="/function">function</router-link>|
-      <router-link to="/optionalParameters">optionalParameters</router-link>|
-      <router-link to="/defaultParameters">defaultParameters</router-link>|
-      <router-link to="/restParameters">restParameters</router-link>|
-      <router-link to="/functionOverloadings">functionOverloadings</router-link>|
+      <router-link to="/function">function</router-link> |
+      <router-link to="/optionalParameters">optionalParameters</router-link> |
+      <router-link to="/defaultParameters">defaultParameters</router-link> |
+      <router-link to="/restParameters">restParameters</router-link> |
+      <router-link to="/functionOverloadings">functionOverloadings</router-link>
       <h1>Generics</h1>
-      <router-link to="/generics">generics</router-link>|
+      <router-link to="/generics">generics</router-link> |
+      <router-link to="/genericInterfaces">genericInterfaces</router-link>
   </nav>
   <router-view/>
 </template>

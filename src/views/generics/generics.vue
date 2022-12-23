@@ -1,6 +1,5 @@
 <template>
-  <h1>泛型
-  </h1>
+  <h1>泛型</h1>
 </template>
 
 <script lang="ts">
@@ -30,9 +29,25 @@ export default defineComponent({
     }
     console.log(getStringArr('1',3));
 
-
     //問題: 函數功能類似但傳入參數不同導致要全部重寫
-    //解法: 使用泛型
+    //解法: 1.使用泛型 2.使用any(不建議)
+    function getStringArrByGenerics<T>(num:T, count:number):T[]{
+      let arr: T[] = []
+      for(let i=0 ; i<=count ; i++){
+        arr.push(num)
+      }
+      return arr
+    }
+    console.log(getStringArrByGenerics<string>("3",3));  //設定為string類型
+    console.log(getStringArrByGenerics<number>(3,3));  //設定為number類型 
+
+    //多個泛型參數的函數
+    function getMsgArr<T,V>(arg1:T , arg2:V):[T,V]{
+      return [arg1 , arg2]
+    }
+
+    console.log(getMsgArr<string, number>('你好', 100));
+
     return {
     }
   }
