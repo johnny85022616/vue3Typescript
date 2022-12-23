@@ -52,7 +52,25 @@ export default defineComponent({
     //person2.job = 'teacher'  //不可對有readonly的屬性做修改
     
     //---------------------------------描述方法屬性-----------------------------
-    
+      interface IstringFormat{
+        (str: string, isUpper: boolean):string
+      } 
+
+      let uppperFormat:IstringFormat;
+
+      uppperFormat = function(s:string , isUpper: boolean):string{  //參數名稱不一定要和interface定義的一樣，但型別要一樣
+        return isUpper? s.toUpperCase() : s
+      }
+      console.log(uppperFormat("apple" , true));
+
+      let lowerFormat: IstringFormat;
+      lowerFormat = function (str: string) {  //定義方法時，參數若沒有interface中的屬性，但呼叫方法時有傳入該屬性，也是可以通過編譯的
+        return str.toLowerCase();
+      };
+      console.log(lowerFormat('APPLE' , false));
+
+
+
     return {
     }
   }
