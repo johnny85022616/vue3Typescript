@@ -16,6 +16,9 @@
       <router-link to="/generics">generics</router-link> |
       <router-link to="/genericInterfaces">genericInterfaces</router-link> |
       <router-link to="/genericConstraints">genericConstraints</router-link> 
+      <h1>optionApi</h1>
+      <router-link to="/optionApi">optionApi</router-link> |
+      <router-link to="/compisitionApi">compisitionApi</router-link> |
   </nav>
   <router-view/>
 </template>
