@@ -3,6 +3,7 @@
     <!-- <router-link to="/">TypeScript</router-link> -->
       <h1>type</h1>
       <router-link to="/typeAssertions">typeAssertions</router-link> |
+      <router-link to="/intersectionTypes">intersectionTypes</router-link> |
       <h1>interface</h1>
       <router-link to="/interface">interface</router-link> |
       <h1>function</h1>
@@ -13,7 +14,8 @@
       <router-link to="/functionOverloadings">functionOverloadings</router-link>
       <h1>Generics</h1>
       <router-link to="/generics">generics</router-link> |
-      <router-link to="/genericInterfaces">genericInterfaces</router-link>
+      <router-link to="/genericInterfaces">genericInterfaces</router-link> |
+      <router-link to="/genericConstraints">genericConstraints</router-link> 
   </nav>
   <router-view/>
 </template>

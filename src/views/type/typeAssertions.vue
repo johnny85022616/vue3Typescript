@@ -31,6 +31,11 @@ export default defineComponent({
       }
     }
 
+    const l:number = getLength("abcd")
+    console.log("length 'abcd' is",l);
+
+    const l1:number = getLength(12345)
+    console.log("length 12345 is",l1);
 
 
     return {

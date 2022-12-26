@@ -10,6 +10,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "interface" */ '../views/type/typeAssertions.vue')
   },
   {
+    path: '/intersectionTypes',
+    name: 'intersectionTypes ',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "intersectionTypes" */ '../views/type/intersectionTypes.vue')
+  },
+  {
     path: '/interface',
     name: 'interface ',
     // route level code-splitting
@@ -80,6 +88,14 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "genericInterfaces" */ '../views/generics/genericInterfaces.vue')
+  },
+  {
+    path: '/genericConstraints',
+    name: 'genericConstraints ',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "genericConstraints" */ '../views/generics/genericConstraints.vue')
   },
 ]
 
