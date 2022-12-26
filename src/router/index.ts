@@ -106,12 +106,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "genericConstraints" */ '../views/optionApi/optionApi.vue')
   },
   {
-    path: '/compisitionApi',
-    name: 'compisitionApi ',
+    path: '/compositionApi',
+    name: 'compositionApi ',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "compisitionApi" */ '../views/compisitionApi/compisitionApi.vue')
+    component: () => import(/* webpackChunkName: "compisitionApi" */ '../views/compositionApi/compositionApi.vue')
   },
 ]
 

@@ -1,6 +1,9 @@
-export interface person {
+interface person {
+  id: number,
   name: string,
   age: number|string,
-  job?: string,
-  salary: 8000
+  salary: number
 }
+
+
+export default person 

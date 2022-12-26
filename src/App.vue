@@ -18,7 +18,7 @@
       <router-link to="/genericConstraints">genericConstraints</router-link> 
       <h1>optionApi</h1>
       <router-link to="/optionApi">optionApi</router-link> |
-      <router-link to="/compisitionApi">compisitionApi</router-link> |
+      <router-link to="/compositionApi">compositionApi</router-link> |
   </nav>
   <router-view/>
 </template>
