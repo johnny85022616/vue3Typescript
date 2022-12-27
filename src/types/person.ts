@@ -1,4 +1,4 @@
-interface person {
+interface Iperson {
   id: number,
   name: string,
   age: number|string,
@@ -6,4 +6,4 @@ interface person {
 }
 
 
-export default person 
+export default Iperson 

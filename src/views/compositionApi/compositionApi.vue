@@ -1,18 +1,20 @@
 <template>
 <div class="optionApi">
-  <ul>
-    <li v-for="item in personList" :key="item.id">name:{{item.name}} age:{{ item.age }} salary:{{ item.salary }}</li>
-  </ul>
+  <personList :personList="personList"/>
 </div>
 </template>
 
 <script lang="ts">
 import {
-  defineComponent, reactive, ref
+  defineComponent, reactive
 } from 'vue';
 import Iperson from '../../types/person';
+import personList from '../../components/compositionApi/personList.vue';
 export default defineComponent({
   name: 'compisitionApi',
+  components:{
+    personList
+  },
   setup(){
     const personList = reactive<Iperson[]>([
       {
