@@ -21,6 +21,8 @@ const props = defineProps({
     type: Array as PropType<Iperson[]>
   }
 })
+
+console.log(props.personList); //若要在script中使用props還是需要寫成props.xxx
 </script>
 
 <style lang="scss" scoped>
