@@ -10,27 +10,17 @@
 </div>
 </template>
 
-<script lang="ts">
-import {
-  defineComponent, PropType
-} from 'vue';
+<script setup lang="ts">
+import {PropType} from 'vue';
 import Iperson from '../../types/person';
-export default defineComponent({
-  name: 'personList',
-  props:{
-    personList:{
-      required: true,
-      type: Array as PropType<Iperson[]>
-    }
-  },
-  setup(){
-    
 
-    return {
-      
-    } 
+//<scriptlang= setup> 場景
+const props = defineProps({
+  personList:{
+    required: true,
+    type: Array as PropType<Iperson[]>
   }
-});
+})
 </script>
 
 <style lang="scss" scoped>

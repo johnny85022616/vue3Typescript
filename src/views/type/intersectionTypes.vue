@@ -35,7 +35,15 @@ export default defineComponent({
       phone: '0933444555'
     }
 
+    const c1: Customer = {    
+      name: 'Johnny',
+      credit: 2334455,
+      email: 'a@gmail.com',
+      phone: '0933444555'
+    }
+
     console.log("employee1:",e1);
+    console.log("Customer1",c1);
     return {}
   }
 });

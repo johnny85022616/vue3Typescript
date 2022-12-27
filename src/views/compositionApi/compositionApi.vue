@@ -1,22 +1,15 @@
 <template>
 <div class="optionApi">
-  <personList :personList="personList"/>
+  <personList :personList="personArr"/>
 </div>
 </template>
 
-<script lang="ts">
-import {
-  defineComponent, reactive
-} from 'vue';
+<script setup lang="ts">
+import {reactive} from 'vue';
 import Iperson from '../../types/person';
 import personList from '../../components/compositionApi/personList.vue';
-export default defineComponent({
-  name: 'compisitionApi',
-  components:{
-    personList
-  },
-  setup(){
-    const personList = reactive<Iperson[]>([
+
+  const personArr = reactive<Iperson[]>([
       {
         id: 1,
         name: 'john',
@@ -31,11 +24,6 @@ export default defineComponent({
       },
     ])
 
-    return {
-      personList
-    } 
-  }
-});
 </script>
 
 <style lang="scss" scoped>

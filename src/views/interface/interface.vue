@@ -50,6 +50,7 @@ export default defineComponent({
     console.log("有傳入年齡: "+fullName1);
 
     //person2.job = 'teacher'  //不可對有readonly的屬性做修改
+    console.log(person2);
     
     //---------------------------------描述方法屬性-----------------------------
       interface IstringFormat{
