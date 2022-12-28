@@ -1,8 +1,8 @@
 interface Iperson {
-  id: number,
-  name: string,
-  age: number|string,
-  salary: number
+  id: number|undefined,
+  name: string|null|undefined,
+  age: number|null|undefined,
+  salary: number|null|undefined
 }
 
 

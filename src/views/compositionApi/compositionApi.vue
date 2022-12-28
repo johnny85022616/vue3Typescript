@@ -1,5 +1,6 @@
 <template>
 <div class="optionApi">
+  <personInput @addPerson="addPerson"/>
   <personList :personList="personArr"/>
 </div>
 </template>
@@ -8,6 +9,7 @@
 import {reactive} from 'vue';
 import Iperson from '../../types/person';  //不需再需要再寫在components:{}中，template可以直接引用
 import personList from '../../components/compositionApi/personList.vue';
+import personInput from '../../components/compositionApi/personInput.vue';
 
   const personArr = reactive<Iperson[]>([
     {
@@ -19,16 +21,20 @@ import personList from '../../components/compositionApi/personList.vue';
     {
       id: 2,
       name: 'Marry',
-      age: '22',
+      age: 22,
       salary: 20000
     },
     {
       id: 3,
       name: 'Jack',
-      age: '10',
+      age: 10,
       salary: 0
     },
   ])
+
+  function addPerson(person: Iperson):void{
+    personArr.push(person)
+  }
 
 </script>
 

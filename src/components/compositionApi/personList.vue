@@ -26,5 +26,8 @@ console.log(props.personList); //若要在script中使用props還是需要寫成
 </script>
 
 <style lang="scss" scoped>
-
+li{
+  display: flex;
+  justify-content: space-between;
+}
 </style>
