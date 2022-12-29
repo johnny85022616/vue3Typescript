@@ -1,10 +1,11 @@
 <template>
 <div class="personList">
   <ul>
-    <li v-for="person in personList" :key="person.id">
+    <li v-for="(person , index) in personList" :key="person.id">
       <p>{{person.name}}</p>
       <p>{{person.age}}</p>
       <p>{{person.salary}}</p>
+      <button @click="deleteItem(index)">刪除</button>
     </li>
   </ul>
 </div>
@@ -21,6 +22,12 @@ const props = defineProps({
     type: Array as PropType<Iperson[]>
   }
 })
+const emit = defineEmits(['deletePerson'])
+
+function deleteItem(index: number){
+  emit('deletePerson', index)
+}
+
 
 console.log(props.personList); //若要在script中使用props還是需要寫成props.xxx
 </script>

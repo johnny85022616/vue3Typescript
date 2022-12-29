@@ -1,7 +1,7 @@
 <template>
 <div class="optionApi">
   <personInput @addPerson="addPerson"/>
-  <personList :personList="personArr"/>
+  <personList :personList="personArr" @deletePerson="deletePerson"/>
 </div>
 </template>
 
@@ -32,8 +32,11 @@ import personInput from '../../components/compositionApi/personInput.vue';
     },
   ])
 
-  function addPerson(person: Iperson):void{
+  function addPerson(person: Iperson){
     personArr.push(person)
+  }
+  function deletePerson(index: number){
+    personArr.splice(index , 1)
   }
 
 </script>

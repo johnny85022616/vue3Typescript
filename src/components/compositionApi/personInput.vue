@@ -18,7 +18,7 @@ const person = reactive<Iperson>({
   age: null,
   salary: null
 })
-async function addPerson(){
+function addPerson(){
   if(person.name && person.age && person.salary){
     const id: number = new Date().getTime()
     person.id = id
@@ -30,6 +30,7 @@ async function addPerson(){
     alert('請填寫')
   }
 }
+
 </script>
 
 <style lang="scss" scoped>
