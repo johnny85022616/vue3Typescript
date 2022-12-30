@@ -1,5 +1,6 @@
 <template>
 <div class="optionApi">
+  <h1>vue3 typescript CRUD</h1>
   <personInput @addPerson="addPerson"/>
   <personList :personList="personArr" @deletePerson="deletePerson"/>
 </div>

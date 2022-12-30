@@ -63,7 +63,7 @@ export interface data {
   startSaleTime:      string;
   deliveryInfos:      DeliveryInfo[];
   specInfo:           Measure[];
-  flags:              any[];
+  flags:              string[];
   productLimit:       number;
   afterDiscountPrice: number;
   noticeMsg:          string;
