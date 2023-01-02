@@ -1,31 +1,35 @@
 <template>
-  <div class="optionApi">
+  <div class="product">
     <h1>vue3 typescript fetch practice</h1>
+    <div class="product__item">
+      <p>品名:</p>
+    </div>
   </div>
-  </template>
+</template>
   
-  <script setup lang="ts">
-import {reactive} from 'vue';
-  import {IProduct} from '../../types/product';
+<script setup lang="ts">
+import { getProduct } from '@/api/product/productDetail';
+import { reactive,toRefs } from 'vue';
+import { IProduct } from '../../types/product';
+ 
 
-  // const productDetail = reactive<{}>({})   
+let productJson = reactive<IProduct>({})   
 
- function getProductDetail():void{
-    fetch('https://m.shopping.friday.tw/mobileapi/api/product/7995418/detail?cid=419485')
-    .then(res => res.json())
-    .then(data=>{
-      console.log(data);
-    })
-  }
+async function getProductDetail(): Promise<void> {
+  const product = await getProduct()
+  productJson = product
+  console.log(productJson);
+}
+
+getProductDetail()
+</script>
   
-  getProductDetail()
-  </script>
-  
-  <style lang="scss" scoped>
-  .optionApi {
-    span{
-      border: 1px solid gray;
-    }
+<style lang="scss" scoped>
+.product{
+  &__item{
+    border: 1px solid gray;
+    padding: 20px;
   }
-  </style>
+}
+</style>
   

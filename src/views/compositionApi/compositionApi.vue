@@ -40,12 +40,6 @@ import personInput from '../../components/compositionApi/personInput.vue';
     personArr.splice(index , 1)
   }
 
-  fetch('https://m.shopping.friday.tw/mobileapi/api/product/7995418/detail?cid=419485')
-  .then(res => res.json())
-  .then(data=>{
-    console.log(data);
-  })
-
 </script>
 
 <style lang="scss" scoped>
