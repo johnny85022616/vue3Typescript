@@ -22,7 +22,18 @@
       <router-link to="/compositionApi">compositionApi</router-link> |
       <router-link to="/fetchProduct">fetchProduct</router-link> |
   </nav>
-  <router-view/>
+  
+  <!-- <router-view /> -->
+  <router-view v-slot="{ Component }">
+    <Suspense>
+        <template #default>
+          <component :is="Component"></component>
+        </template>
+        <template #fallback>
+          <h1>Loading...</h1>
+        </template>
+    </Suspense>
+  </router-view>
 </template>
 
 <style lang="scss">
