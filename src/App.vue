@@ -25,12 +25,14 @@
   
   <!-- <router-view /> -->
   <router-view v-slot="{ Component }">
-    <Suspense>
+    <Suspense timeout="0">
         <template #default>
-          <component :is="Component"></component>
+          <div>
+            <component :is="Component"/>
+          </div>
         </template>
         <template #fallback>
-          <h1>Loading...</h1>
+          <span>sLoading...</span>
         </template>
     </Suspense>
   </router-view>

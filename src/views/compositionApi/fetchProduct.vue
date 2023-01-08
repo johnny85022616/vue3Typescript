@@ -23,7 +23,7 @@ async function getProductDetail(): Promise<void> {
   console.log(product , productJson);
 }
 
-getProductDetail()
+await getProductDetail()
 </script>
   
 <style lang="scss" scoped>
