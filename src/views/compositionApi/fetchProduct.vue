@@ -1,10 +1,9 @@
 <template>
   <div class="product">
     <h1>vue3 typescript fetch practice</h1>
-    <div class="product__item">
-      <!-- <p>品名:{{ productJson.data[0].name }}</p>
-      <p v-html="productJson.data[0].intro"></p> -->
-      <p>{{ productJson }}</p>
+    <div class="product__item" v-if="productJson && productJson.data && productJson.data.length > 0">
+      <p>品名:{{ productJson.data[0].name }}</p>
+      <p v-html="productJson.data[0].intro"></p>
     </div>
   </div>
 </template>
@@ -13,7 +12,6 @@
 import { getProduct } from '@/api/product/productDetail';
 import { reactive } from 'vue';
 import { IProduct } from '../../types/product';
-
 
 let productJson = reactive<IProduct>({})   
 
@@ -31,6 +29,9 @@ await getProductDetail()
   &__item{
     border: 1px solid gray;
     padding: 20px;
+    ::v-deep p{
+      text-align: left;
+    }
   }
 }
 </style>

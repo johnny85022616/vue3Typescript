@@ -32,7 +32,7 @@
           </div>
         </template>
         <template #fallback>
-          <span>sLoading...</span>
+          <span>Loading...</span>
         </template>
     </Suspense>
   </router-view>
