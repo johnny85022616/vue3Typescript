@@ -75,6 +75,21 @@ const routes: Array<RouteRecordRaw> = [
     name: 'fetchProduct ',
     component: () => import(/* webpackChunkName: "fetchProduct" */ '../views/compositionApi/fetchProduct.vue')
   },
+  {
+    path: '/class',
+    name: 'class ',
+    component: () => import(/* webpackChunkName: "fetchProduct" */ '../views/class/class.vue')
+  },
+  {
+    path: '/polymorphism',
+    name: 'polymorphism ',
+    component: () => import(/* webpackChunkName: "fetchProduct" */ '../views/class/polymorphism.vue')
+  },
+  {
+    path: '/dataModifiers',
+    name: 'dataModifiers ',
+    component: () => import(/* webpackChunkName: "fetchProduct" */ '../views/class/dataModifiers.vue')
+  },
 ]
 
 const router = createRouter({

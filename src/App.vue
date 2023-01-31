@@ -6,6 +6,10 @@
       <router-link to="/intersectionTypes">intersectionTypes</router-link> |
       <h1>interface</h1>
       <router-link to="/interface">interface</router-link> |
+      <h1>class</h1>
+      <router-link to="/class">class</router-link> |
+      <router-link to="/polymorphism">polymorphism</router-link> |
+      <router-link to="/dataModifiers">dataModifiers</router-link> |
       <h1>function</h1>
       <router-link to="/function">function</router-link> |
       <router-link to="/optionalParameters">optionalParameters</router-link> |
