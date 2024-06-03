@@ -2,6 +2,7 @@
   <nav>
     <!-- <router-link to="/">TypeScript</router-link> -->
       <h1>type</h1>
+      <router-link to="/typeIntroduction">typeIntroduction</router-link> |
       <router-link to="/typeAssertions">typeAssertions</router-link> |
       <router-link to="/intersectionTypes">intersectionTypes</router-link> |
       <h1>interface</h1>

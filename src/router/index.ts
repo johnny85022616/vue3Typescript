@@ -1,6 +1,11 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
+    path: '/typeIntroduction',
+    name: 'typeIntroduction ',
+    component: () => import(/* webpackChunkName: "interface" */ '../views/type/typeIntroduction.vue')
+  },
+  {
     path: '/typeAssertions',
     name: 'typeAssertions ',
     component: () => import(/* webpackChunkName: "interface" */ '../views/type/typeAssertions.vue')
