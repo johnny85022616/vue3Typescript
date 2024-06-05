@@ -54,6 +54,6 @@
     let person : {name: string , gender: Gender } = {name: 'johnny',gender: Gender.male}
     console.log(person);
     console.log(person.gender === Gender.male);
-    
-    
+  
+  
 </script>

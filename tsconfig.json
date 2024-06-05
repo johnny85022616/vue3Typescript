@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
+    "target": "esnext", //檔案會被編譯成哪一個版本的js
+    "module": "esnext", //用哪一種引入方式 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node12', 'nodenext'
+    "strict": true,  //所有嚴格檢查的總開關
     "jsx": "preserve",
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -21,21 +21,21 @@
         "src/*"
       ]
     },
-    "lib": [
+    "lib": [  //要使用的程式庫(一般來說不需要做改動)
       "esnext",
       "dom",
       "dom.iterable",
       "scripthost"
     ]
   },
-  "include": [
+  "include": [   //需要被編譯成js的
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
-  "exclude": [
+  "exclude": [  //不需要被編譯成js的
     "node_modules"
   ]
 }
